@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToDoList.API</name>
+    </assembly>
+    <members>
+        <member name="M:ToDoList.API.Controllers.ToDoListController.QueryAsync(System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Query ToDoItem by specific description and done
+            </summary>
+            <param name="description">todoItem descripion</param>
+            <param name="done">ToDoItem status</param>
+            <returns></returns>
+            <response code="200">Returned all todoitems by specific description and done</response>
+        </member>
+        <member name="M:ToDoList.API.Controllers.ToDoListController.UpdateAsync(System.String,ToDoList.API.Models.ToDoItemUpdate)">
+            <summary>
+            Update ToDoItem with partial model
+            </summary>
+            <param name="id">Id of ToDoItem to update</param>
+            <param name="updateModel">Patial update model</param>
+            <returns></returns>
+            <response code="200">Updated ToDoItem</response>
+            <response code="400">If id is empty</response>
+            <response code="404">If id is not existed in database</response>   
+        </member>
+        <member name="M:ToDoList.API.Controllers.ToDoListController.DeleteAsync(System.String)">
+            <summary>
+            Delete ToDoItem by id
+            </summary>
+            <param name="id">Id of todoItem to delete</param>
+            <returns></returns>
+            <response code="204">ToDoItem deleted</response>
+            <response code="400">If id is empty</response>
+            <response code="404">If id is not existed in database</response>   
+        </member>
+        <member name="M:ToDoList.API.Controllers.ToDoListController.UpsertAsync(ToDoList.API.Models.ToDoItem)">
+            <summary>
+            Upsert ToDoItem
+            </summary>
+            <param name="todoItem"></param>
+            <returns></returns>
+            <response code="200">Upserted ToDoItem</response>
+            <response code="400">If id is empty</response>
+        </member>
+    </members>
+</doc>
